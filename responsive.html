@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Responisve lesson</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+
+        <style>
+
+            /***Base Style***/
+            h1{
+                margin-bottom: 15px;
+            }
+            p{
+                border: 1px solid black;
+                margin-bottom: 15px;
+            }
+            #p1{
+                background-color: aqua;
+                width: 300px;
+                height: 300px;
+            }
+            #p2{
+                background-color: blueviolet;
+                width: 50px;
+                height: 50px;
+            }
+
+
+
+            /***LARGE***/
+            @media (min-width:1200px){
+                #p1{
+                    width:80%;
+                }
+                #p2{
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+            /***MED***/
+            @media (min-width:992px) and (max-width:1199px){
+                #p1{
+                    width:50%
+                }
+                #p2{
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            
+            /*can use logical operators to combine queries
+            They cannont overlap.  Make sure the queries are specific and have seperate boundires*/
+        </style>
+    </head>
+    <body>
+        <h1>This is the title</h1>
+        <p id="p1"></p>
+        <p id="p2"></p>
+
+        <p></p>
+    </body>
+</html>
+
+
+
+html

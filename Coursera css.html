@@ -10,7 +10,53 @@
         <title>CSS notes</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css"
+        <style>
+
+            *{
+                box-sizing: border-box;
+            }
+            /*is used to apply to all elements SPECIFICALLY*/
+            body{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .style{
+                font-family: Arial, sans-serif;
+                color: gray;
+                font-style: italic;
+            }
+            #box{
+                background-color: blue;
+                padding: 10px;
+                border: 5px dashed black;
+                width: 300px;
+                
+                /*This is used to clamp all size addons to the width or hight you set*/
+            }
+            #bg{
+                width: 500px;
+                height: 500px;
+                background-color: bisque;
+                background-image: url("bg.webp");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 400px;
+
+                
+            }
+            .col p{
+                width: 50%;
+                border: 1px solid black;
+                float: left;
+                padding: 10px;
+            }
+
+        </style>
+
+      <link rel="stylesheet" href="style.css"
+        
+        
         
     </head>
 
@@ -20,21 +66,59 @@
 
 
         <h2>Cascade algorithm notes</h2>
-        <p>4 concepts make up the algorithm
-            <ol>
+        <p class="style">4 concepts make up the algorithm
+            <ol class="style">
                 <li>Origin</li>
                 <li>Merge</li>
                 <li>Inheritance</li>
                 <li>Specifity</li>
             </ol>
-
+        <div class="wrapper">
             <div>1. Rule last declaration wins.   so the element closer to the bottom of the document</div>
             <div> 2. Inheritance DOM tree - children inherant the properties of their parent.</div>
             <div>3. Specifity - Most specific selector wins  you can override everything by adding "!important" to a style</div>
             <div>4.whop</div>
+        </div>
         </p>
 
         <h2>Styling text</h2>
-        <p></p>
+        <p>Relative text size.  120% will be 20% larger than the browser default text size</p>
+        <p>em unit of measurement.   means size relative to the letter m</p>
+        <p>when styling subseqent elements they will be cumulative not overwriting the previous styles</p>
+
+        <h2 id="box">The Box model</h2>
+        <p>evey element in html is a box.</p>
+        
+
+
+        <h1>The HTML box model</h1>
+
+        <div id="box">
+            The box
+            <div id="content">
+                And this is the box cotennt
+            </div>
+            <div id="content2">
+                cumulative margins.
+            </div>
+
+        </div>
+
+
+        <h1>Background property</h1>
+        <div id="bg"></div>
+
+        <div class="col">
+            <h1>2 Column</h1>
+                <p id="p1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit pariatur voluptatem quisquam, quidem porro expedita optio harum sequi eligendi accusantium. Quae eveniet temporibus distinctio, nostrum unde quam soluta porro veritatis!</p>
+                <p id="p2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique natus doloremque dolorum ad. Cupiditate commodi libero culpa nisi quia nesciunt porro eaque, repellendus sunt placeat? Placeat reiciendis minima ullam. Praesentium?</p>
+            <section>this is the section it is regualr content</section>
+        </div>
+
+        <h1>Positioning</h1>
+        <div class="pos">
+            <p></p>
+
+        </div>
     </body>
 </html>
